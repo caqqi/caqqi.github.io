@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Powerful things you can do with the Markdown editor"
-author: sal
+author: bruno
 categories: [ Jekyll, tutorial ]
 image: assets/images/16.jpg
 ---
@@ -26,6 +26,19 @@ There are two types of code elements which can be inserted in Markdown, the firs
 ```
 .my-link {
     text-decoration: underline;
+}
+```
+
+#### JAVA
+
+```java
+@SpringBootApplication
+public class KinesisApplicationConsumer {
+
+    public static void main(String[] args) {
+        SpringApplication.run(KinesisApplicationConsumer.class, args);
+    }
+
 }
 ```
 
