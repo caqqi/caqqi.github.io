@@ -1,7 +1,7 @@
 # Site
 name: "Caqqi"
 title: "Caqqi"
-description: "Java | Spring | Linux | Backend."
+description: "Java | Spring | Linux | Backend"
 logo: 'assets/images/logo-caqqi.png'
 favicon: 'assets/images/logo-caqqi.png'
 baseurl: https://caqqi.com
