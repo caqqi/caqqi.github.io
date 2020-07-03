@@ -17,13 +17,15 @@ License: https://www.wowthemes.net/freebies-license/
     max-width: 50px;
     max-height: 50px;
 }
-.mainheading-title {
-    display: inline-flex;
-}
 
 .mainheading-title a {
     text-decoration: none;
     color: #000;
+    display: inline-flex;
+}
+
+.mainheading-title a:hover {
+    text-decoration: none;
 }
 
 a {
