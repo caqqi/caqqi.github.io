@@ -46,59 +46,24 @@
 		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	</noscript>
-
-<!-- Begin Menu Navigation
-================================================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-
-    <div class="container pr-0">
-
-    <!-- Begin Logo -->
-    <a class="navbar-brand" href="{{ site.baseurl }}/">
-    <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
-    </a>
-    <!-- End Logo -->
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarMediumish">
-        <!-- Begin Menu -->
-
-            <ul class="navbar-nav ml-auto">
-                {% if page.url == "/" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                    <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}/about">Sobre</a>
-                </li>
-            </ul>
-
-        <!-- End Menu -->
-    </div>
-    </div>
-</nav>
-<!-- End Navigation
-================================================== -->
+<!-- Begin Menu Navigation -->
 
 <div class="site-content">
+    <div class="container">
 
-<div class="container">
-
-<!-- Site Title
-================================================== -->
-<div class="mainheading">
-    <h1 class="sitetitle">{{ site.name }}</h1>
-    <p class="lead">
-        {{ site.description }}
-    </p>
-</div>
+        <!-- Site Title
+        ================================================== -->
+        <div class="mainheading">
+            <div class="mainheading-title">
+                <a href="{{ site.baseurl }}/">
+                    <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
+                    <h1 class="sitetitle">{{ site.name }}</h1>
+                </a>
+            </div>
+            <p class="lead">
+                {{ site.description }}
+            </p>
+        </div>
 
 <!-- Content
 ================================================== -->
