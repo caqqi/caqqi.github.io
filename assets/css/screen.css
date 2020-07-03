@@ -10,6 +10,7 @@ License: https://www.wowthemes.net/freebies-license/
 
 .mainheading {
     padding: 1rem 0rem;
+    text-align: center;
 }
 
 .mainheading img {
@@ -18,6 +19,11 @@ License: https://www.wowthemes.net/freebies-license/
 }
 .mainheading-title {
     display: inline-flex;
+}
+
+.mainheading-title a {
+    text-decoration: none;
+    color: #000;
 }
 
 a {
