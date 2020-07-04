@@ -25,6 +25,7 @@ License: https://www.wowthemes.net/freebies-license/
 .mainheading-title-a {
     text-decoration: none;
     color: #000;
+    display: inline-flex;
 }
 
 a {
