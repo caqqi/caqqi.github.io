@@ -18,7 +18,7 @@ License: https://www.wowthemes.net/freebies-license/
     max-height: 50px;
 }
 
-.mainheading-title a, a:hover {
+.mainheading-title a {
     text-decoration: none;
     color: #000;
     display: inline-flex;
