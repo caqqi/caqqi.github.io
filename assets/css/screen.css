@@ -27,11 +27,6 @@ License: https://www.wowthemes.net/freebies-license/
     color: #000;
 }
 
-.mainheading-title-a:hover {
-    text-decoration: none;
-    color: #000;
-}
-
 a {
     color: #00ab6b;
     transition: all 0.2s;
