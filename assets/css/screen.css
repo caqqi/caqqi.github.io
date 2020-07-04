@@ -13,12 +13,12 @@ License: https://www.wowthemes.net/freebies-license/
     text-align: center;
 }
 
-.mainheading img {
+.mainheading-logo {
     max-width: 50px;
     max-height: 50px;
 }
 
-.mainheading-title a {
+.mainheading-title-a, :hover {
     text-decoration: none;
     color: #000;
     display: inline-flex;
