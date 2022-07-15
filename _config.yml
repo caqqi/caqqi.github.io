@@ -61,4 +61,9 @@ adsense-data-ad-slot: "1363087678"
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
 
+# Config Comments Disqus
+site:
+  disqus: caqqi  
+comments: true
+
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
