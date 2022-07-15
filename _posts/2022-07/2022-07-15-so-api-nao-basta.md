@@ -1,22 +1,22 @@
 ---
 layout: post
-title:  "Só a API não basta, falta criatividade!"
+title:  "Só a API não basta, falta criatividade"
 author: bruno
 categories: [ Java, Spring Boot ]
 tags: [springboot, junior, jr, java]
 image: assets/images/11.jpg
-description: "Conteúdo só para ~~baixinhos~~ juninhos!"
-featured: true
+description: "Conteúdo só para ~~baixinhos~~ juninhos"
+featured: false
 ---
 
-## Só a API não basta, falta criatividade!
-#### Conteúdo só para ~~baixinhos~~ juninhos!
+
+## Conteúdo só para ~~baixinhos~~ juninhos!
 
 Quando estamos programando, eu acredito que seja:
 
-30% - Leitura
-20% - Escrita
-50% - Pensamento / Análise / **Criatividade**
+- 30% - Leitura
+- 20% - Escrita
+- 50% - Pensamento / Análise / **Criatividade**
 (esses números podem mudar dependendo de cada caso, pessoa ou mesmo não fazer sentido)
 
 ## Posts na rede
@@ -25,14 +25,14 @@ Quando estamos programando, eu acredito que seja:
 
 Isso é legal. Mostra que estamos "pegando as coisas" bem rápido, mas se pararmos para análisar, está faltando algo ai e é coisa muito importante ... vamos análisar.
 
-## Autópisia de um(a) CRUD/API
+## Autópisia de um(a) API
 
 [[ * IMAGEM DE CONTROLLER * ]]
 
-É um ```Controller / RestController``` do dia-a-dia, algo até muito interessante para quem está começando no Spring/Spring Boot. Mas perceba, é uma **classe Java normal** com algumas anotações do Spring -- E se vc já está mexendo com Spring Boot: **Classes, Métodos, Atributos, Parametros, String, Integer, Objeto** deve ser algo **NORMAL** (Não queria mexer em framework caso você não esteja confortavél com isso)!
+É um ```Controller/RestController``` do dia-a-dia, algo até muito interessante para quem está começando no Spring/Spring Boot. Mas perceba, é uma **classe Java normal** com algumas anotações do Spring -- E se vc já está mexendo com Spring Boot: **Classes, Métodos, Atributos, Parametros, String, Integer, Objeto** deve ser algo **NORMAL** (Não queria mexer em framework caso você não esteja confortavél com isso)!
 
 Voltando ao ```Controller``` perceba, **é um método com apenas uma linha**, não há logica aqui:
-```
+```java
 @GET
 public ResponseEntity<List<Cliente>> dados() {
     return ResponseEntity.ok(service.dados());
@@ -45,7 +45,7 @@ Vamos análisar o ```Service``` agora:
 
 Novamente **é um método com apenas uma linha**, não há logica aqui:
 
-```
+```java
 @GET
 public List<Cliente> dados() {
     return repository.findAll();
@@ -58,7 +58,7 @@ Vamos análisar o ```Repository``` agora:
 
 E novamente não há nada aqui, nem se quer o método de uma linha.
 
-```
+```java
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> { } 
 ```
