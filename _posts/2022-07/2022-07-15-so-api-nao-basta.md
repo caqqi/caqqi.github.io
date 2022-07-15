@@ -1,0 +1,91 @@
+---
+layout: post
+title:  "Só a API não basta, falta criatividade!"
+author: bruno
+categories: [ Java, Spring Boot ]
+tags: [springboot, junior, jr, java]
+image: assets/images/11.jpg
+description: "Conteúdo só para ~~baixinhos~~ juninhos!"
+featured: true
+---
+
+## Só a API não basta, falta criatividade!
+#### Conteúdo só para ~~baixinhos~~ juninhos!
+
+Quando estamos programando, eu acredito que seja:
+
+30% - Leitura
+20% - Escrita
+50% - Pensamento / Análise / **Criatividade**
+(esses números podem mudar dependendo de cada caso, pessoa ou mesmo não fazer sentido)
+
+## Posts na rede
+
+É comum vermos posts do pessoal que está começando ou que fez o ultimo Bootcamp da moda mostrando que conseguiu fazer uma API REST com Java e Spring Boot que por sua vez está gravando os dados no banco de dados.
+
+Isso é legal. Mostra que estamos "pegando as coisas" bem rápido, mas se pararmos para análisar, está faltando algo ai e é coisa muito importante ... vamos análisar.
+
+## Autópisia de um(a) CRUD/API
+
+[[ * IMAGEM DE CONTROLLER * ]]
+
+É um ```Controller / RestController``` do dia-a-dia, algo até muito interessante para quem está começando no Spring/Spring Boot. Mas perceba, é uma **classe Java normal** com algumas anotações do Spring -- E se vc já está mexendo com Spring Boot: **Classes, Métodos, Atributos, Parametros, String, Integer, Objeto** deve ser algo **NORMAL** (Não queria mexer em framework caso você não esteja confortavél com isso)!
+
+Voltando ao ```Controller``` perceba, **é um método com apenas uma linha**, não há logica aqui:
+```
+@GET
+public ResponseEntity<List<Cliente>> dados() {
+    return ResponseEntity.ok(service.dados());
+} 
+```
+
+Vamos análisar o ```Service``` agora:
+
+[[ * IMAGEM DE SERVICE * ]]
+
+Novamente **é um método com apenas uma linha**, não há logica aqui:
+
+```
+@GET
+public List<Cliente> dados() {
+    return repository.findAll();
+} 
+```
+
+Vamos análisar o ```Repository``` agora:
+
+[[ * IMAGEM DE REPOSITORY * ]]
+
+E novamente não há nada aqui, nem se quer o método de uma linha.
+
+```
+@Repository
+public interface ClienteRepository extends JpaRepository<Cliente, Long> { } 
+```
+
+## Falta algo, precisamos mais de "nós" mesmos
+
+Sem mais delongas, falta **criatividade**. Foi apenas um copia-cola. Não há **lógica** envolvida - só chamadas de métodos que por sua vez tem apenas uma linha chamando outro método. Não colocamos nada de novo, não há uma coisa inventada por mim (eu como programador que estou programando o projeto). Apenas copiei. Faltou ```if's, whiles, for's```, outras classes que eu mesmo invento. Uma lógica totalmente aleatória que eu criei, algo que de um toque de criatividade, que mostre que estou indo além do copia-cola e criando coisas, me desafiando.
+
+## No mundo real o "buraco é mais embaixo"
+
+Quando você entrar no mercado de trabalho para construir ou dar manutenção em sistemas você não fara só: **chamadas de métodos que por sua vez tem apenas uma linha chamando outro método**. Irão existir as **Regras de Negócios**, e aqui meu amigo é uma coisa mais doida que a outra. Vão ser pensamentos/ideias (que devem ser transformadas em código) da mais pura criatividade possivél. E você terá que fazer isso.
+Terá que entender o que outra pessoa pensou/criou e transformar em código apartir disso. Dai vão surgir ```if's, whiles, for's, classes, métodos, chamadas para outros sistemas``` e novamente (sendo repetitivo): **não será apenas métodos com uma linha chamando outro método**
+
+## Ta bom, entendi e como eu faço agora
+Vamos refazer esse CRUD/API igualzinho como foi comentado aqui. Só que de um ponto em diante, será tudo por nossa conta. Tudo será criado da nossa cabeça, enfrentando um desafio de cada vez. Eu espero que você perceba o momento onde "**terminamos o básico e aprtir dai adicionamos funcionalidades novas criadas a partir do zero, usando puramente nossa criatividade**". Esse momento é muito importante. É onde estamos realmente aprendendo, descobrindo, desbravando o novo e fixando o conteúdo passado.
+
+Vou usar coisas legais como:
+
+> - Spring Boot
+> - JUnit 5 para os testes unitários
+> - Consumo de uma api externa
+> - Leitura de arquivo
+> - Banco de dados e etc
+
+Bom, eu acredito que será muita coisa para ser escrita então eu vou fazer isso através de video/live coding e se gostou e quiser acompanhar, segue o link (abaixo) para a playlist onde desenvolvi uma api que chamei de **Descontão** e coloquei toda criatividade possivél.
+
+[[ * LINK AQUI * ]]
+
+Te velo lá,
+{}'s
