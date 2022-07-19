@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Só a API não basta, falta criatividade"
+title:  "Só a api não basta, falta criatividade"
 author: bruno
 categories: [ Java, Spring Boot ]
 tags: [springboot, junior, jr, java]
@@ -10,7 +10,7 @@ featured: false
 ---
 
 
-## Conteúdo só para ~~baixinhos~~ juninhos!
+## Conteúdo só para ~~baixinhos~~ juninhos
 
 Quando estamos programando, eu acredito que seja:
 
@@ -25,42 +25,44 @@ Quando estamos programando, eu acredito que seja:
 Isso é legal. Mostra que estamos "pegando as coisas" bem rápido, mas se pararmos para análisar, está faltando algo ai e é coisa muito importante.
 
 
-### Autópisia de um(a) API
+### Autópisia de uma API
 
-[[ * IMAGEM DE CONTROLLER * ]]
+![walking]({{ site.baseurl }}/assets/images/posts/2022-07/imagem-api-controller.png)
 
 É um ```Controller/RestController``` do dia-a-dia, algo até muito interessante para quem está começando no Spring/Spring Boot. Mas perceba, é uma **classe Java normal** com algumas anotações do Spring -- E se vc já está mexendo com Spring Boot: **Classes, Métodos, Atributos, Parametros, String, Integer, Objeto** deve ser algo **NORMAL** (Não queria mexer em framework caso você não esteja confortavél com isso)!
 
 Voltando ao ```Controller``` perceba, **é um método com apenas uma linha**, não há logica aqui:
+
 ```java
-@GET
-public ResponseEntity<List<Cliente>> dados() {
-    return ResponseEntity.ok(service.dados());
+@GetMapping
+public ResponseEntity<List<Cliente>> listarClientes() {
+    return ResponseEntity.ok(clienteService.listarClientes());
 } 
 ```
 
 Vamos análisar o ```Service``` agora:
 
-[[ * IMAGEM DE SERVICE * ]]
+![walking]({{ site.baseurl }}/assets/images/posts/2022-07/imagem-api-service.png)
 
 Novamente **é um método com apenas uma linha**, não há logica aqui:
 
 ```java
-@GET
-public List<Cliente> dados() {
-    return repository.findAll();
-} 
+public Cliente obterDadosCliente(Long clienteId) {
+    return clienteRepository.findById(clienteId).orElse(null);
+}
 ```
 
 Vamos análisar o ```Repository``` agora:
 
-[[ * IMAGEM DE REPOSITORY * ]]
+![walking]({{ site.baseurl }}/assets/images/posts/2022-07/imagem-api-repository.png)
 
 E novamente não há nada aqui, nem se quer o método de uma linha.
 
 ```java
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, Long> { } 
+public interface ClienteRepository extends JpaRepository<Cliente, Long> { 
+
+}
 ```
 
 Sem mais delongas, falta **criatividade**. Foi apenas um copia-cola. Não há **lógica** envolvida - só chamadas de métodos que por sua vez tem apenas uma linha chamando outro método. Não colocamos nada de novo, não há uma coisa inventada por mim (eu como programador que estou programando o projeto). Apenas copiei. Faltou ```if's, whiles, for's```, outras classes que eu mesmo invento. Uma lógica totalmente aleatória que eu criei, algo que de um toque de criatividade, que mostre que estou indo além do copia-cola e criando coisas, me desafiando.
