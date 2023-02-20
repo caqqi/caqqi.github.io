@@ -6,7 +6,7 @@
 lang: "en"
 
 # Name of your site (displayed in the header)
-title: Forever Jekyll
+title: Caqqi
 
 # Short bio or description (displayed in the header)
 description: A simple, elegant and full featured Jekyll theme
@@ -33,10 +33,10 @@ navigation_links:
   - title: Blog
     url: /
 
-  - title: About
+  - title: Sobre
     url: /about
 
-  - title: Search
+  - title: Busca
     url: /search
 
 # Footer icons
